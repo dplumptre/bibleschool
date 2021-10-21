@@ -1,0 +1,5 @@
+@media only screen and (max-width: 992px) {
+	.inner_page_breadcrumb {
+		margin-top: -5px;
+	}
+}
