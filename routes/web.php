@@ -56,6 +56,7 @@ Route::prefix('admin')->group(function () {
 Route::prefix('super-admin')->group(function () {  
     Route::get('settings', [App\Http\Controllers\SuperAdminController::class,'settings'])->name('super-admin.settings');
     Route::get('settings/{setting}', [App\Http\Controllers\SuperAdminController::class,'settingForm'])->name('super-admin.settings.form');
+    Route::post('settings/form', [App\Http\Controllers\SuperAdminController::class,'settingFormPost'])->name('super-admin.settings.post.form');
 });
 
 

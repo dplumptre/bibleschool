@@ -34,6 +34,18 @@
 					
 						<div class="col-xl-12">
 							<div class="application_statics">
+								@if (count($errors) > 0)
+								<div class="alert alert-danger">
+									<ul>
+										@foreach ($errors->all() as $error)
+											<li>{{ $error }}</li>
+										@endforeach
+									</ul>
+								</div>
+							@endif
+
+
+
                                 
 								<div class="table-responsive">
                                 <table id="example" class="table table-striped table-bordered" style="width:100%">

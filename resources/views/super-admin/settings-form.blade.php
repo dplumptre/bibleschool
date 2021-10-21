@@ -39,16 +39,17 @@
 								<div class="table-responsive">
 
 
-									<form method="POST" action="{{ route('ps.post.dp') }}">
+									<form method="POST" action="{{ route('super-admin.settings.post.form') }}">
 										@csrf
 				
 										<div class="form-group">
 											<label for="exampleInputName">Status</label>
 										   <select class="form-control" name="status" id="">
 											<option value="">Select </option>
-											   <option value="accepted">Accepted</option>
-											   <option value="rejected">Rejected</option>
+											   <option value="0">Expire</option>
+											   <option value="1">Renew</option>
 										   </select>
+										   <input type="hidden" name="setting_id" value="{{ $setting->id }}">
 										   @if($errors->has('status'))
 										   <small class="text-danger">{{ $errors->first('status') }}</small>
 										   @endif

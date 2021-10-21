@@ -103,10 +103,10 @@ class PaystackController extends Controller
             // for acceptance
             $user = User::where('email',$tranx->data->customer->email)->first();
             $info = [
-              'subject'    => $p->purpose,
+              'subject'     => $p->purpose,
               'username'    => $user->username,
-              'course' =>     $p->course_slug,
-              'url'        =>  env('APP_URL'),
+              'course'      => $p->course_slug,
+              'url'         => env('APP_URL'),
             ];
             Mail::to($user->email)->send(new AcceptanceMail($info));
           }

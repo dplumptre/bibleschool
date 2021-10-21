@@ -44,6 +44,7 @@
 											<th>Service</th>
                                             <th>Updated On</th>
 											<th>Expires On</th>
+											<th>Status</th>
 											<th>Action</th>
                                         </tr>
                                     </thead>
@@ -53,8 +54,9 @@
                                         <tr>
 											<td>{{$key+1}}</td>
 										    <td>{{$d->service}}</td>
-                                            <td></td>
-											<td></td>
+                                            <td>{{$d->updated_on}}</td>
+											<td>{{$d->expired_on}}</td>
+											<td>{{ $d->status == 1  ? "Active " : "Inactive"   }}  </td>
 											<td> <a class="btn btn-secondary" href="{{ asset('super-admin/settings/'.$d->id) }}"><i class="fa fa-paper-plane"></i>  </a></td>
 										</tr>
 										@endforeach

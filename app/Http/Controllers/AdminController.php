@@ -80,18 +80,25 @@ class AdminController extends Controller
 
 
         if($request->status =="accepted"){
-            $data->acceptance_status = "accepted";
-            $info = [
-                'name'      => $data->name,
-                'course_slug' => $data->course_slug,
-                'content'   => 'Congrats, you have been accepted for '.$data->course_slug.' kindly find details of your acceptance attached to this email',
-                'payment'   => 'Kindly click on the url to make payment for the course',
-                'button'    => 'Make Payment',
-                'url'       => env('APP_URL')."/home/payment/".$data->course_slug,
-                'pdf'       => $pdf,
-                'status'    => 'yes',
-              ];
-              Mail::to($data->email)->send(new SendAcceptanceMail($info));
+
+              $set = Setting::where('slug','acceptance-letter')->first();
+              if($set->status == 1){
+                $data->acceptance_status = "accepted";
+                $info = [
+                    'name'      => $data->name,
+                    'course_slug' => $data->course_slug,
+                    'content'   => 'Congrats, you have been accepted for '.$data->course_slug.' kindly find details of your acceptance attached to this email',
+                    'payment'   => 'Kindly click on the url to make payment for the course',
+                    'button'    => 'Make Payment',
+                    'url'       => env('APP_URL')."/home/payment/".$data->course_slug,
+                    'pdf'       => $pdf,
+                    'status'    => 'yes',
+                  ];
+                Mail::to($data->email)->send(new SendAcceptanceMail($info));
+              }else{
+                return redirect('admin/applications')->withErrors('PDF Pluggin has expired check Plugin page');
+              }
+              
         }else{
             $data->acceptance_status = "rejected";
             $info = [
