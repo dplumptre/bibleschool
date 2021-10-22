@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mailinglist;
 use Illuminate\Http\Request;
+use App\Models\Setting;
 use Session;
 
 class MailinglistController extends Controller
@@ -22,8 +23,9 @@ class MailinglistController extends Controller
 
     public function index()
     {
+        $service = Setting::where('slug','email-listing')->first();
         $data = Mailinglist::all();
-        return view('mailinglist.index',compact('data'));
+        return view('mailinglist.index',compact('data','service'));
     }
 
     /**

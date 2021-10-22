@@ -30,7 +30,7 @@ class SuperAdminController extends Controller
     {
         $set = Setting::find($request->setting_id);
 
-        $date = $set->updated_on;
+        $date = date('Y-m-d');
         $futureDate=date('Y-m-d', strtotime('+1 year', strtotime($date)) );
 
         if($request->status == 1){

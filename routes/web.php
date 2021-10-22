@@ -51,6 +51,9 @@ Route::prefix('admin')->group(function () {
     Route::get('applications', [App\Http\Controllers\AdminController::class,'Applications'])->name('admin.applications');
     Route::get('acceptance/{transaction}', [App\Http\Controllers\AdminController::class,'acceptance'])->name('admin.acceptance');
     Route::post('acceptance/{transaction}', [App\Http\Controllers\AdminController::class,'postAcceptance'])->name('post.admin.acceptance');
+
+
+    Route::get('plugins', [App\Http\Controllers\AdminController::class,'plugins'])->name('admin.plugins');
 });
 
 Route::prefix('super-admin')->group(function () {  

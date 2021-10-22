@@ -58,7 +58,7 @@
 		
 										<form method="POST" action="{{ route('mailinglist.store') }}">
 											@csrf
-										<div class="my_setting_content mb30">
+										
 
 		
 		
@@ -81,9 +81,9 @@
 
 														<div class="col-lg-12">
 														</div>
-															<button type="submit" class="btn btn-log btn-block btn-thm2" >Save <span class="flaticon-right-arrow-1 ml15"></span></button>
+															<button type="submit" class="btn btn-log  btn-thm2" >Save <span class="flaticon-right-arrow-1 ml15"></span></button>
 														</div>
-													</div>
+													
 
 
 

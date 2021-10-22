@@ -146,7 +146,11 @@ class AdminController extends Controller
         return view('admin.show-details',compact('profile'));
     }
 
-
+    public function plugins()
+    {
+        $data = Setting::all();
+        return view('admin.plugins',compact('data'));
+    }
     
 
 }
