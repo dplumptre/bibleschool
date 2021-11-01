@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
@@ -20,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_id',
     ];
 
     /**
@@ -58,6 +60,21 @@ public function getProfile($user_id){
     $data = Profile::where('id',$user_id)->first();
     return $data;
 }
+
+
+
+public function hasRole($role){
+    $data = Role::where('role',$role)->first();
+    if($role){
+        return true;
+    }
+    return false;
+}
+
+
+
+
+
 
  public function isNotFilled(){
 

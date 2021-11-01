@@ -67,7 +67,7 @@
                                 </div>
 
 
-
+                                <input type="hidden" name="role_id" value="1"/>
 
 
 

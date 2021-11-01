@@ -3,7 +3,12 @@
 		<li class="active"><a href="{{route('home.profile')}}"><span class="flaticon-puzzle-1"></span> Profile</a></li>
 
 
-		 @if(    auth()->user()->role->role == "admin"  )
+
+	
+
+
+
+		 @if(   auth()->user()->hasRole("admin")   )
 		 <li><a href="{{ route('admin.users')}}"><span class="flaticon-online-learning"></span> Users</a></li>
 		 <li><a href="{{ route('admin.applications')}}"><span class="flaticon-online-learning"></span>Applications</a></li>
 		 <li><a href="{{ route('admin.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
@@ -12,7 +17,7 @@
 		 <li><a href="{{ route('mailinglist.index')}}"><span class="flaticon-online-learning"></span> Mailing List</a></li>
 		 @endif
 
-		 @if(    auth()->user()->role->role == "user"  )
+		 @if(   auth()->user()->hasRole("user")  )
 
 		 <li><a href="{{ route('home.courses')}}"><span class="flaticon-online-learning"></span> All Courses</a></li>
 		 <li><a href="{{ route('home.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
@@ -21,7 +26,7 @@
 		 @endif
 		 
 
-		 @if(    auth()->user()->role->role == "super-admin"  )
+		 @if(    auth()->user()->hasRole("super-admin")   )
 		 <li><a href="{{ route('super-admin.settings')}}"><span class="flaticon-settings"></span> Settings</a></li>
 		 @endif
 
