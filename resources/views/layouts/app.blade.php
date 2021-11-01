@@ -251,7 +251,7 @@
  
 
                  @auth
-                    @if(    auth()->user()->role->role == "admin"  )
+                    @if(     auth()->user()->hasRole("admin")   )
                     <li><a href="{{ route('admin.users')}}"><span class="flaticon-online-learning"></span> Users</a></li>
                     <li><a href="{{ route('admin.applications')}}"><span class="flaticon-online-learning"></span>Applications</a></li>
                     <li><a href="{{ route('admin.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
@@ -261,7 +261,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    @elseif(    auth()->user()->role->role == "user"  )
+                    @elseif(    auth()->user()->hasRole("user")  )
             
                     <li><a href="{{ route('home.courses')}}"><span class="flaticon-online-learning"></span> All Courses</a></li>
                     <li><a href="{{ route('home.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
