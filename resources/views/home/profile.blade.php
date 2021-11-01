@@ -1,7 +1,10 @@
-
+<?php
+use App\Models\Profile;
+  $data = Profile::find(auth()->user()->id); 
+  ?>
 
 @extends('layouts.app')
-{{   $data = Profile::find(auth()->user()->id); }}
+
 
 
 
