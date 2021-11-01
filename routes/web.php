@@ -25,7 +25,7 @@ Route::get('/school-of-post-graduate-studies', [App\Http\Controllers\WelcomeCont
 Route::get('/school-of-ministry', [App\Http\Controllers\WelcomeController::class, 'som'])->name('welcome.som');
 Route::get('/school-courses/{slug}', [App\Http\Controllers\WelcomeController::class, 'somCourse'])->name('welcome.single.course');
 Route::get('/contact', [App\Http\Controllers\WelcomeController::class, 'contact'])->name('welcome.contact');
-
+Route::get('/reload-captcha', [App\Http\Controllers\WelcomeController::class, 'reloadCaptcha']);
 
 
 Route::prefix('home')->group(function () {  

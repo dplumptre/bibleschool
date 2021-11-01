@@ -76,7 +76,13 @@ class WelcomeController extends Controller
             $acceptanceletter->status = 0;
             $acceptanceletter->save();
         }
+    }
 
+
+    public function reloadCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+        
     }
 
 

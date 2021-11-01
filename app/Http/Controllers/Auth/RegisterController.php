@@ -41,6 +41,13 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+
+    public function reloadCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -53,6 +60,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'captcha' => 'required|captcha'
         ]);
     }
 

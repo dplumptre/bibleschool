@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -13,6 +13,17 @@
                                 <p class="text-center">Have an account? <a class="text-thm"
                                         href="{{ route('login') }}">Login</a></p>
                             </div>
+
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div><br />
+                            @endif
+
 
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
@@ -54,6 +65,42 @@
                                         name="password_confirmation" required autocomplete="new-password"
                                         placeholder="Confirm Password">
                                 </div>
+
+
+
+
+
+
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
+        
+                                    <div class="col-md-6">
+                                   <div class="captcha">
+                                    <span>{!! captcha_img() !!}</span>
+                                     <a class="reload" id="reload">
+                                        <i class="fas fa-sync text-secondary"></i> 
+                                        </a>
+                                    </div>
+        
+                                   
+                                    </div>
+                                </div>
+        
+                       <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right">{{ __('Enter Captcha') }}</label>
+                                    @error('captcha')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    <div class="col-md-6">
+                                             <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+                                   
+                                    </div>
+                                </div>
+
+
+
                                 <button type="submit" class="btn btn-log btn-block btn-thm2">Register</button>
 
                             </form>
@@ -67,4 +114,18 @@
             </div>
         </div>
     </div>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#reload').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: 'reload-captcha',
+                success: function (data) {
+                    $(".captcha span").html(data.captcha);
+                }
+            });
+        });
+    
+    </script>
+
 @endsection
