@@ -1,7 +1,7 @@
 
 
 @extends('layouts.app')
-
+{{   $data = Profile::find(auth()->user()->id); }}
 
 
 
