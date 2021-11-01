@@ -120,8 +120,8 @@
                 <div class="row">
                     <div class="col-lg-5 col-xl-5">
                         <ul class="home4_header_top_contact">
-                            <li class="list-inline-item"><a href="#">(56) 123 456 789</a></li>
-                            <li class="list-inline-item"><a href="#">info@gsbvs.org</a></li>
+                            <li class="list-inline-item"><a href="#">(+234) 8033438048</a></li>
+                            <li class="list-inline-item"><a href="#">nata@tfolc.org</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-7 col-xl-7">

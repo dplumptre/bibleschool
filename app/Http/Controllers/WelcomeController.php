@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\School;
 use App\Models\Course;
-
+use App\Models\Setting;
 class WelcomeController extends Controller
 {
     
@@ -13,6 +13,9 @@ class WelcomeController extends Controller
 
     public function index()
     {
+
+     
+       $this->checkExpiration();
         return view('welcome.index');
     }
 
@@ -42,6 +45,7 @@ class WelcomeController extends Controller
         $courses = Course::where('school_id',$sch->id)->get();
         return view('welcome.som',compact('courses'));
     }
+    
 
     public function somCourse($slug)
     {
@@ -56,5 +60,26 @@ class WelcomeController extends Controller
     {
         return view('welcome.contact');
     }
+
+
+
+    public function checkExpiration()
+    {
+        $emaillisting = Setting::where('slug','email-listing')->first();
+        $acceptanceletter = Setting::where('slug','acceptance-letter')->first();
+        if(date('Y-m-d')  > $emaillisting->expired_on){
+            $emaillisting->status = 0;
+            $emaillisting->save();
+        }
+
+        if(date('Y-m-d')  > $acceptanceletter->expired_on){
+            $acceptanceletter->status = 0;
+            $acceptanceletter->save();
+        }
+
+    }
+
+
+
 
 }
