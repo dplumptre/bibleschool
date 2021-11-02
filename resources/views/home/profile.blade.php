@@ -1,10 +1,11 @@
 <?php
 use App\Models\Profile;
-  $data = Profile::find(auth()->user()->id); 
-  ?>
+$data = Profile::where('user_id',auth()->user()->id)->first();
+
+
+?>
 
 @extends('layouts.app')
-
 
 
 

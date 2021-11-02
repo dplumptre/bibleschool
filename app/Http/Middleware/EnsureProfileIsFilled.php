@@ -18,7 +18,7 @@ class EnsureProfileIsFilled
     public function handle(Request $request, Closure $next)
     {
 
-        if ($request->user()->role->role == "user") {
+        if ($request->user()->hasRole("user")) {
 
             if ($request->user()->isNotFilled() === true) {
                 return redirect()->route('home')->withErrors('You cannot proceed to apply for any course until you have completed your profile'); 

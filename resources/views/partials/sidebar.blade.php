@@ -7,7 +7,6 @@
 	
 
 
-
 		 @if(   auth()->user()->hasRole("admin")   )
 		 <li><a href="{{ route('admin.users')}}"><span class="flaticon-online-learning"></span> Users</a></li>
 		 <li><a href="{{ route('admin.applications')}}"><span class="flaticon-online-learning"></span>Applications</a></li>

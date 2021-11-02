@@ -71,7 +71,7 @@ class HomeController extends Controller
 
 
         $user = auth()->user();
-        $p = Profile::find($user->id);
+        $p = Profile::where('user_id',$user->id)->first();
         $p->update($request->except(['_token', '_method' ]));
         Session::flash('message', 'Successfully updated! You can now apply!');
         return back();

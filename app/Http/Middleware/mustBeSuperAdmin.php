@@ -16,7 +16,7 @@ class mustBeSuperAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->user()->role->role != "super-admin") {
+        if (!$request->user()->hasRole("super-admin")) {
             return redirect()->route('home')->withErrors('You dont have access to visit this page'); 
         }
         return $next($request);

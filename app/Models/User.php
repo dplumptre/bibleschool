@@ -44,8 +44,7 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     public function role(){
-        return $this->hasOne(Role::class,'id');
-
+        return $this->hasOne(Role::class);
     }
 
  public function transactions(){
@@ -65,7 +64,7 @@ public function getProfile($user_id){
 
 public function hasRole($role){
     $data = Role::where('role',$role)->first();
-    if($role){
+    if($data->id == $this->role_id){
         return true;
     }
     return false;

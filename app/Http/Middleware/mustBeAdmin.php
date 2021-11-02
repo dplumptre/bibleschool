@@ -16,8 +16,8 @@ class mustBeAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-
-        if ($request->user()->role->role == "user") {
+       
+        if ($request->user()->hasRole("user")) {
             return redirect()->route('home')->withErrors('You dont have access to visit this page'); 
         }
         return $next($request);
