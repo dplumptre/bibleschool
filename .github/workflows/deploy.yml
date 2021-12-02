@@ -21,3 +21,5 @@ jobs:
         with:
           php-version: 7.3
           extensions: mbstring, ctype, fileinfo, openssl, pdo, bcmath, json, tokenizer, xml
+      - name: install composer dependencies
+        run: composer install --no-dev --no-interaction --prefer-dist
