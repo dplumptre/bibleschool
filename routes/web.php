@@ -43,7 +43,7 @@ Route::prefix('home')->group(function () {
 
 
 Route::prefix('admin')->group(function () {  
-    Route::get('show-details/{profile}', [App\Http\Controllers\AdminController::class,'showDetails'])->name('admin.show.details');
+    Route::get('show-details/{user}', [App\Http\Controllers\AdminController::class,'showDetails'])->name('admin.show.details');
     Route::get('schools', [App\Http\Controllers\AdminController::class,'schools'])->name('admin.schools');
     Route::get('users', [App\Http\Controllers\AdminController::class,'users'])->name('admin.users');
     Route::get('settings', [App\Http\Controllers\AdminController::class,'settings'])->name('admin.settings');

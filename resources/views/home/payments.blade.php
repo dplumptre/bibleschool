@@ -42,6 +42,7 @@
 											<th>S/n</th>
 											<th>Date</th>
 											<th>Purpose</th>
+											<th>Course</th>
 											<th>Amount</th>
                                             <th>Status</th>
                                         </tr>
@@ -55,6 +56,7 @@
 											<td>{{$key+1}}</td>
 											<td>{{ $d->created_at->format('y-m-d')}}</td>
 											<td>{{ strtoupper($d->purpose) }}</td>
+											<td>{{ strtoupper($d->course_slug) }}</td>
 											<td>{{ $d->amount}}</td>
                                             <td>{{ $d->status }} </td>
                                       </tr>

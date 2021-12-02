@@ -87,7 +87,7 @@ class AdminController extends Controller
                 $info = [
                     'name'      => $data->name,
                     'course_slug' => $data->course_slug,
-                    'content'   => 'Congrats, you have been accepted for '.$data->course_slug.' kindly find details of your acceptance attached to this email',
+                    'content'   => 'Congrats, you have been accepted for '.strtoupper($data->course_slug).' kindly find details of your acceptance attached to this email',
                     'payment'   => 'Kindly click on the url to make payment for the course',
                     'button'    => 'Make Payment',
                     'url'       => env('APP_URL')."/home/payment/".$data->course_slug,
@@ -103,7 +103,7 @@ class AdminController extends Controller
             $data->acceptance_status = "rejected";
             $info = [
                 'name'      => $data->name,
-                'content'   => 'You have been rejected for '.$data->course_slug.' try again',
+                'content'   => 'You have been rejected for '.strtoupper($data->course_slug).' try again',
                 'payment'   =>'',
                 'course_slug' => $data->course_slug,
                 'button'    => 'Website',
@@ -141,9 +141,10 @@ class AdminController extends Controller
         return view('admin.applications')->with('data',$data);
     }
 
-    public function showDetails(Profile $profile)
+    public function showDetails(User $user)
     {
-        return view('admin.show-details',compact('profile'));
+        $profile = Profile::where('user_id',$user->id)->first();
+        return view('admin.show-details',compact('profile','user'));
     }
 
     public function plugins()

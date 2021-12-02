@@ -53,7 +53,7 @@
 											<td>{{$key+1}}</td>
 										    <td>{{$d->name}}</td>
                                             <td>{{$d->email}}</td>
-											<td> <a class="btn btn-secondary" href="{{ asset('admin/show-details/'.$d->getProfile($d->id)->id) }}">  <i class="fa fa-info"></i>   </a></td>  
+											<td> <a class="btn btn-secondary" href="{{ asset('admin/show-details/'.$d->id) }}">  <i class="fa fa-info"></i>   </a></td>  
 										</tr>
 										@endforeach
                                     </table>

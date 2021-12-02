@@ -60,7 +60,7 @@
                                             <td>{{ $d->name }}</td>
                                             <td>{{ $d->email }}</td>
 											<td>{{ $d->purpose }}</td>
-											<td>{{ $d->amount}}</td>
+											<td>{{ number_format($d->amount,2)}}</td>
                                             <td>{{ $d->status }} </td>
                                             <td> <a class="btn btn-secondary" href="{{ asset('admin/show-details/'.$d->getProfile($d->user_id)->id) }}">  <i class="fa fa-info"></i>   </a></td>  
 										</tr>

@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<nav class="breadcrumb_widgets" aria-label="breadcrumb mb30">
-								<h4 class="title float-left">{{ $profile->users->name}} Details</h4>
+								<h4 class="title float-left">{{ $user->name}} Details</h4>
 							</nav>
 						</div>
 					
@@ -43,13 +43,13 @@
 											<th>NAME</th>
 										</tr>
 										<tr>
-											<td>{{ $profile->users->name}}</td>
+											<td>{{ $user->name}}</td>
 										</tr>
 										<tr>
 											<th>EMAIL</th>
 										</tr>
 										<tr>
-											<td>{{ $profile->users->email}}</td>
+											<td>{{ $user->email}}</td>
 										</tr>										
 										<tr>
 											<th>ADDRESS</th>

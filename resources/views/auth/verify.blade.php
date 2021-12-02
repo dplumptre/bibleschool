@@ -4,9 +4,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card" style="margin:50px">
-                   
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+  
+
+                <div class="heading mt-5">
+                    <h3 class="text-center">{{ __('Verify Your Email Address') }}</h3>
+                </div>
+
 
                 <div class="card-body" style="margin:60px">
                     @if (session('resent'))
@@ -24,7 +27,6 @@
                     </form>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 @endsection
