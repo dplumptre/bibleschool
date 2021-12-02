@@ -16,3 +16,8 @@ jobs:
         run: |
           npm install
           npm run prod
+      - name: configure php 7.3
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: 7.3
+          extensions: mbstring, ctype, fileinfo, openssl, pdo, bcmath, json, tokenizer, xml
