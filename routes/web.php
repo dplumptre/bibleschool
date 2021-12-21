@@ -19,6 +19,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome.index');
 Route::get('/about', [App\Http\Controllers\WelcomeController::class, 'about'])->name('welcome.about');
+Route::get('/nuturing', [App\Http\Controllers\WelcomeController::class, 'nuturing'])->name('welcome.nuturing');
 Route::get('/history', [App\Http\Controllers\WelcomeController::class, 'history'])->name('welcome.history');
 Route::get('/team', [App\Http\Controllers\WelcomeController::class, 'team'])->name('welcome.team');
 Route::get('/school-of-post-graduate-studies', [App\Http\Controllers\WelcomeController::class, 'sopgs'])->name('welcome.sopgs');

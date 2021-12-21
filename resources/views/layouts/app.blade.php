@@ -175,7 +175,7 @@
                     <a  style="text-decoration: none;" href="{{ asset('/')}}" class="navbar_brand float-left dn-smd">
                         <img class="logo1 img-fluid" width="80px" height="80px" src="{{ asset('images/logo.png')}}" alt="logo.png">
                         <img class="logo2 img-fluid" width="80px" height="80px" src="{{ asset('images/logo.png')}}" alt="logo.png">
-                        <span>NIDUS AQUILAE TRAINING ACADEMY</span>
+                        <span style="font-size: 11px">Nidus Aquilae <br>Training Academy</span>
                     </a>
                     <div class="menu6_search home6 float-right">
                         <div class="search_overlay">
@@ -202,6 +202,13 @@
                         <li class="last">
                             <a href="{{ asset('/contact') }}"><span class="title">Contact</span></a>
                         </li>
+                        <li class="list_two">
+                            <a href=""><span class="title">Seminars</span></a>
+                            <ul>
+                                <li><a href="{{ asset('/nuturing') }}">Pastoral Nurturing with Pastor Taiwo</a></li>
+                                {{-- <li><a href="{{ asset('/team') }}">Team</a></li> --}}
+                            </ul>
+                        </li>
                        {{-- <li class="last">
                             <a href="{{ asset('/courses') }}"><span class="title">Courses</span></a>
                         </li> --}}
@@ -220,6 +227,7 @@
                                 <li><a href="{{ asset('/team') }}">Team</a></li>
                             </ul>
                         </li>
+
                         <li class="list_one">
                             <a href="{{ asset('/') }}"><span class="title">Home</span></a>
                         </li>
@@ -348,7 +356,7 @@
                     <div class="col-sm-7 col-md-5 col-lg-4 col-xl-3 pb15 pt15">
                         <div class="logo-widget home6">
                             {{-- <img class="img-fluid" src="images/header-logo.png" alt="header-logo.png"> --}}
-                            <span>NIDUS AQUILAE TRAINING ACADEMY</span>
+                            <span>Nidus Aquilae Training Academy</span>
                         </div>
                     </div>
                     <div class="col-sm-5 col-md-7 col-lg-5 col-xl-5 pb25 pt25 brdr_left_right home6">

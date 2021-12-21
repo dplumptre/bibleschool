@@ -44,7 +44,7 @@
 					<div class="contact_localtion text-center">
 						<div class="icon"><span class="flaticon-email"></span></div>
 						<h4>Write Some Words</h4>
-						<p>Info@edumy.com</p>
+						<p>gsbcfountain@gmail.com</p>
 					</div>
 				</div>
 			</div>

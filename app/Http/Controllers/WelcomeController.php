@@ -34,6 +34,11 @@ class WelcomeController extends Controller
         return view('welcome.history');
     }
 
+    public function nuturing()
+    {
+        return view('welcome.nuturing');
+    }
+
     public function sopgs()
     {
         return view('welcome.sopgs');

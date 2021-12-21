@@ -93,7 +93,7 @@
                         <div class="details">
                             <h3>Welcome</h3>
                             <p>
-                                The Grace Springs Bible College of the Fountain of Life Church, Ilupeju – Lagos was
+                                Nidus Aquilae Training Academy of the Fountain of Life Church, Ilupeju – Lagos was
                                 established as part of the vision given to Pastor Taiwo Odukoya the Senior Pastor of the
                                 Fountain of Life Church.
                                 The guiding Philosophy of the College is the pursuit of excellence in life and ministry with

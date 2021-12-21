@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\User;
 use App\Models\Mailinglist;
 use App\Models\Setting;
+use App\Providers\UserPayment;
 
 class PaystackController extends Controller
 {
@@ -51,16 +52,12 @@ class PaystackController extends Controller
 
 
     public function handleGatewayCallback(Request $request){
-    
-        
 
-
+     // https://nata.tfolc.org/payment/callback
         
         $response = $this->doCallback($request->input('reference'));
         $tranx = json_decode($response);
-        
-       if(!$tranx->status){die('API returned error: ' . $tranx->message); }// there was an error from the API
-    
+      if(!$tranx->status){die('API returned error: ' . $tranx->message); }// there was an error from the API
       if('success' == $tranx->data->status){
          $amount = $tranx->data->amount /100;
           try{
@@ -84,21 +81,21 @@ class PaystackController extends Controller
           //email teachers
 
 
-          $data = [
-            'email'      => $tranx->data->customer->email,
-            'amount'     => $amount,
-            'reason'     => $p->purpose,
-            'subject'    => "Payment Receipt",
-            'url'        =>  env('APP_URL'),
-          ];
-
           $set = Setting::where('slug','email-listing')->first();
           if($set->status == "1"){
             // for mailing list
-            $emails = Mailinglist::all();
-            foreach($emails as $email){
-            Mail::to($email->email)->send(new Payment($data));
-            }
+            //$emails = Mailinglist::all();
+            $data = [
+              'email'      => $tranx->data->customer->email,
+              'amount'     => $amount,
+              'reason'     => $p->purpose,
+              'subject'    => "Payment Receipt",
+              'url'        =>  env('APP_URL'),
+            ];
+            UserPayment::dispatch($data); // dispatching event
+            // foreach($emails as $email){
+            // Mail::to($email->email)->send(new Payment($data));
+            // }
 
             // for acceptance
             $user = User::where('email',$tranx->data->customer->email)->first();

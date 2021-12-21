@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <div>
                         <div class="about_whoweare">
-                            <p class="mb-5">The Grace Springs Bible College was established according to the mandate given
+                            <p class="mb-5">Nidus Aquilae Training Academy was established according to the mandate given
                                 to Pastor
                                 Taiwo Odukoya (Snr. Pastor of the Fountain of Life Church) in January 2000 after a long time
                                 of careful preparation and as a follow up on the Ministry Classes taken by Pastor Taiwo in

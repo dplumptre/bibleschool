@@ -29,15 +29,13 @@ class Payment extends Mailable
      */
     public function build()
     {
-
-
         return $this->markdown('emails.payment')
-        ->subject($this->data['subject'])
+        ->subject($this->data->subject)
         ->with([
-            'email' => $this->data['email'],
-            'reason' => $this->data['reason'],
-            'amount' => $this->data['amount'],
-            'url' => $this->data['url'],
+            'email' => $this->data->email,
+            'reason' => $this->data->reason,
+            'amount' => $this->data->amount,
+            'url' => $this->data->url,
         ]);
     }
 }
