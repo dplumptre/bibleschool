@@ -9,8 +9,8 @@ trait PaystackTrait {
     
     private $curl_url   =   "https://api.paystack.co/transaction/initialize";
     private $verify_url =   "https://api.paystack.co/transaction/verify/";
-    private $redirect_link = 'http://bibleapp.local/redirect?status=';
-    //private $redirect_link = 'http://payonline.tfolc.org/redirect?status=';  
+    //private $redirect_link = 'http://bibleapp.local/redirect?status=';
+    private $redirect_link = 'http://payonline.tfolc.org/redirect?status=';  
     
 
      public function generateRandomString($length = 10) {
@@ -23,9 +23,6 @@ trait PaystackTrait {
         return $randomString;
     }
     
-
-
-
 
     public function sendToGateway($amount,$email,$currency){
     
