@@ -141,6 +141,12 @@
                                         <span>Register</span></a>
                             @endif
                         @else
+                        <a href="{{ route('home.courses')}}"><span class="btn btn-md"> All Courses</span></a>
+                       <a href="{{ route('home.payments')}}"><span class="btn btn-md">Payments</span> </a>
+                        <a href="{{ route('home.applications')}}"><span class="btn btn-md"> My Applications</span></a>
+
+
+
                                 <a href="{{ asset('/home/profile') }}" class="btn btn-md">
                                         <span>My Profile</span></a>
 
@@ -274,7 +280,6 @@
                     <li><a href="{{ route('home.courses')}}"><span class="flaticon-online-learning"></span> All Courses</a></li>
                     <li><a href="{{ route('home.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
                     <li><a href="{{ route('home.applications')}}"><span class="flaticon-online-learning"></span> My Applications</a></li>
-                    <li><a href="#"><span class="flaticon-shopping-bag-1"></span> Order</a></li>
                     <li><a href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="flaticon-logout"></span> Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
