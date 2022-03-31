@@ -32,8 +32,8 @@ class CourseSeeder extends Seeder
         $data = Course::create([
             'school_id' => $school->id,
             'course' => 'FOUNDATION IN CHRISTIAN MINISTRY',
-            'price' => '5000',
-            'application_price' => '1000',
+            'price' => '6000',
+            'application_price' => '1100',
             'slug' => 'fcm',
             'description' => 'FCM is a ten weeks Programme designed to lay proper foundation for Christian maturity, spiritual understanding and discovery of God’s purpose for life and ministry.',
             'duration' => '10 weeks.',
@@ -43,8 +43,8 @@ class CourseSeeder extends Seeder
         $data = Course::create([
             'school_id' => $school->id,
             'course' => 'CERTIFICATE IN CHRISTIAN MARRIAGE COUNSELLING',
-            'price' => '30000',
-            'application_price' => '5000',
+            'price' => '31000',
+            'application_price' => '5100',
             'slug' => 'ccmc',
             'description' => 'CCMC is a twenty-two weeks Programme designed to prepare students for marriage and marriage counselling ministry.',
             'duration' => '22 Weeks.',
@@ -54,9 +54,9 @@ class CourseSeeder extends Seeder
         $data = Course::create([
             'school_id' => $school->id,
             'course' => 'CERTIFICATE IN FOLLOW-UP & DISCIPLESHIP STRATEGIES',
-            'application_price' => '5000',
-            'price' => '20000',
-            'slug' => 'cfus',
+            'application_price' => '5100',
+            'price' => '21000',
+            'slug' => 'cfds',
             'description' => 'CFDS is a 22 weeks Programme designed to equip students with the needed skill for ethical and effective follow up and discipleship ministry work.',
             'duration' => '22 weeks',
             'requirement' => 'Interested candidate must be born again and must be able to understand and communicate well in English language. GCE O’ Level or its equivalent is an added advantage',
@@ -65,8 +65,8 @@ class CourseSeeder extends Seeder
         $data = Course::create([
             'school_id' => $school->id,
             'course' => 'CERTIFICATE IN CHRISTIAN MINISTRY ',
-            'application_price' => '5000',
-            'price' => '25000',
+            'application_price' => '5100',
+            'price' => '26000',
             'slug' => 'ccm',
             'description' => 'CCM is a 22 weeks Programme designed to prepare students for ministry work. It is a basic requirement for Diploma in Christian Ministry Programme',
             'duration' => '22 weeks',
@@ -75,21 +75,21 @@ class CourseSeeder extends Seeder
 
         $data = Course::create([
             'school_id' => $school->id,
-            'course' => 'DIPLOMA IN CHRISTIAN MINISTRY',
-            'application_price' => '5000',
-            'price' => '40000',
-            'slug' => 'dcm',
-            'description' => 'DCM is a twelve months Programme designed to develop the understanding, attitude and skills necessary both in theory and practices for students to fulfill their calling. It intends to provide the intellectual depth necessary for ministry realities and commitment. Students with outstanding performance could proceed for Bachelor of Theology Programme.',
+            'course' => 'ADVANCED CERTIFICATE IN CHRISTIAN MINISTRY',
+            'application_price' => '5100',
+            'price' => '41000',
+            'slug' => 'accm',
+            'description' => 'ACCM is a twelve months Programme designed to develop the understanding, attitude and skills necessary both in theory and practices for students to fulfill their calling. It intends to provide the intellectual depth necessary for ministry realities and commitment. Students with outstanding performance could proceed for Bachelor of Theology Programme.',
             'duration' => '34 Weeks',
             'requirement' => 'Interested candidates must be born again and have 4 O Level credits including English Language, CRK is an added advantage.',
         ]);
 
         $data = Course::create([
             'school_id' => $school->id,
-            'course' => 'DIPLOMA IN CHURCH PLANTING AND ADMINISTRATION',
-            'application_price' => '5000',
-            'price' => '40000',
-            'slug' => 'dcpa',
+            'course' => 'ADVANCED CERTIFICATE IN CHURCH PLANTING AND ADMINISTRATION',
+            'application_price' => '5100',
+            'price' => '41000',
+            'slug' => 'accpa',
             'description' => 'Philosophy: - Ministry according to the purpose of Christ and centered on the Word.
             Purpose: - To equip pastors and church workers adequately for effective ministry within the Church..',
             'duration' => '34 Weeks',
@@ -98,10 +98,10 @@ class CourseSeeder extends Seeder
 
         $data = Course::create([
             'school_id' => $school->id,
-            'course' => 'ADVANCED DIPLOMA IN LEADERSHIP',
-            'application_price' => '5000',
-            'price' => '60000',
-            'slug' => 'adl',
+            'course' => 'ADVANCED CERTIFICATE IN LEADERSHIP',
+            'application_price' => '5100',
+            'price' => '61000',
+            'slug' => 'acl',
             'description' => ' To produce in participants, high-integrity and leadership empowerment that will make them quality leaders in their various spheres of influence and also create a hunger for excellence in the discharge of their responsibilities.',
             'duration' => '41 Weeks',
             'requirement' => 'Must be Born-again, must have a minimum academic qualification of O’ Levels W.A.S.C. or its equivalent, certificates from recognized seminary. Must have the ability to communicate in English.',

@@ -67,7 +67,7 @@
     <table width="100%" cellspacing="" cellpadding="0" border="0" class="smsize">
         <tr>
             <td  style="padding:0px;padding:10px;font-size:20;font-weight:bold" align="center">
-				<p>THE FOUNTAIN OF LIFE MINISTRY TRAINING ACADEMY</p>
+				<p> {{ env('APP_NAME')}} </p>
             </td>
         </tr>
 	</table>

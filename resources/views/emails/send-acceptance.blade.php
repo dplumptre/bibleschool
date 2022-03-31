@@ -11,8 +11,7 @@ Hello {{ $name}},<br><br>
 {{ $button }}
 @endcomponent
 
-
-<p> TFOLC MINISTRY TRAINING ACADEMY</p><br><br>
+<br><br>
 
 
 Thanks,<br>

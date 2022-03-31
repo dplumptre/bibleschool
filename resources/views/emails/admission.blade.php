@@ -10,9 +10,7 @@ Hello {{ $name}},<br><br>
 @component('mail::button', ['url' => $url])
 {{ $button }}
 @endcomponent
-
-
-<p> TFOLC MINISTRY TRAINING ACADEMY</p><br><br>
+<br><br>
 
 
 Thanks,<br>

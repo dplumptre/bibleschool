@@ -5,8 +5,6 @@ Hello {{ $username}},<br><br>
 
 <p>You will get a response from us shortly</p>
 
-<p> TFOLC MINISTRY TRAINING ACADEMY</p><br><br>
-
 @component('mail::button', ['url' => $url])
 WEBSITE
 @endcomponent
