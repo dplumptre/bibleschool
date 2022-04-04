@@ -152,6 +152,13 @@ class AdminController extends Controller
         $data = Setting::all();
         return view('admin.plugins',compact('data'));
     }
+
+
+    public function students()
+    {
+        $data = Transaction::where('status','success')->where('acceptance_status','accepted')->get();
+        return view('admin.students')->with('data',$data);
+    }
     
 
 }

@@ -12,7 +12,7 @@
 		 <li><a href="{{ route('admin.applications')}}"><span class="flaticon-online-learning"></span>Applications</a></li>
 		 <li><a href="{{ route('admin.payments')}}"><span class="flaticon-online-learning"></span> Payments</a></li>
 		 <li><a href="{{ route('admin.plugins')}}"><span class="flaticon-online-learning"></span> Plugin</a></li>
-		 {{-- <li><a href="{{ route('admin.schools')}}"><span class="flaticon-online-learning"></span> Schools</a></li> --}}
+		 <li><a href="{{ route('admin.students')}}"><span class="flaticon-online-learning"></span> Students</a></li>
 		 <li><a href="{{ route('mailinglist.index')}}"><span class="flaticon-online-learning"></span> Mailing List</a></li>
 		 @endif
 

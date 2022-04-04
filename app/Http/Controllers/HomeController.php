@@ -109,7 +109,7 @@ class HomeController extends Controller
 
     public function payments()
     {
-        $data = Transaction::orderBy('id','Desc')->get();
+        $data = Transaction::where('user_id',auth()->user()->id)->orderBy('id','Desc')->get();
         return view('home.payments')->with('data',$data);
     }
 
