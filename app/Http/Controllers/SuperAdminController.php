@@ -34,7 +34,6 @@ class SuperAdminController extends Controller
         $futureDate=date('Y-m-d', strtotime('+1 year', strtotime($date)) );
 
         if($request->status == 1){
-           
             $set->updated_on = $date;
             $set->expired_on = $futureDate;
             $set->status = 1;

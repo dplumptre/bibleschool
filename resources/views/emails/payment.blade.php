@@ -11,7 +11,7 @@ Hello,<br><br>
 
 
 
-<p> TFOLC MINISTRY TRAINING ACADEMY</p><br><br>
+<p> {{ config('app.name') }}/p><br><br>
 
 @component('mail::button', ['url' => $url])
 WEBSITE

@@ -80,7 +80,6 @@ class AdminController extends Controller
 
 
         if($request->status =="accepted"){
-
               $set = Setting::where('slug','acceptance-letter')->first();
               if($set->status == 1){
                 $data->acceptance_status = "accepted";

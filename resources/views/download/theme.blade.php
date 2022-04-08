@@ -94,7 +94,7 @@
         <tr>
             <td  style="padding:0px;" align="left">
 				<p>Calvary greetings,</p>
-                <p>The Board of TFOLC Training Academy is glad to offer admission into our: </p>
+                <p>The Board of {{ env('APP_NAME')}} is glad to offer admission into our: </p>
                 <p> <strong>{{$course->course}}.</strong></p>
 				<p>The training is on Saturdays and shall be through virtual interactions for <strong>{{ strtoupper($course->duration) }}</strong> 8pm Nigeria time.</p>
 				<p>The login details and the Schedule will be sent to you when training fees are paid.</p>
