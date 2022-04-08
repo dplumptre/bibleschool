@@ -96,7 +96,7 @@
 				<p>Calvary greetings,</p>
                 <p>The Board of {{ env('APP_NAME')}} is glad to offer admission into our: </p>
                 <p> <strong>{{$course->course}}.</strong></p>
-				<p>The training is on Saturdays and shall be through virtual interactions for <strong>{{ strtoupper($course->duration) }}</strong> 8pm Nigeria time.</p>
+				<p>The training would be through virtual interactions for <strong>{{ strtoupper($course->duration) }}</strong> and we will communicate the time Training schedule to you soon.</p>
 				<p>The login details and the Schedule will be sent to you when training fees are paid.</p>
 				<p>To accept this offer you are required to pay the Sum of <strong>N{{ number_format($course->price,2)}}</strong>  ONLY.</p>
 				<p>We look forward to having this wonderful experience together.</p>
@@ -114,8 +114,7 @@
 
 
 
-
-
+   
 
 
 
